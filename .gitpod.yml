@@ -1,0 +1,26 @@
+tasks:
+  - name: main-console
+    init: |
+      # an undesirable fix for "permission errors" on docker, see https://github.com/jupyter/docker-stacks/issues/114 - should improve this!
+      chmod 777 jupyter
+      chmod 777 jupyter/secureconnect
+      chmod 777 jupyter/*.ipynb
+      #
+      #
+      ./init_tools.sh
+    command: |
+      clear
+      ./setup.sh
+ports:
+  - port: 8888
+    visibility: public
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: false
+    addCheck: true
+    addComment: false
+    addBadge: true
+    addLabel: false

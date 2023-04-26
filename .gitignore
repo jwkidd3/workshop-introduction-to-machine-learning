@@ -1,0 +1,13 @@
+.env
+.cache/
+__pycache__
+.jupyter/
+.ipynb_checkpoints/
+.ipython/
+.ivy2/
+.local/
+jupyter/secureconnect/*.zip
+secure*.zip
+initialize/create_tables.cql
+bin/
+logs/
